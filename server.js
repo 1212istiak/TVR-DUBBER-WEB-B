@@ -11,6 +11,7 @@ const commentsRoutes = require('./routes/comments');
 const reactionsRoutes = require('./routes/reactions');
 const adminRoutes = require('./routes/admin');
 const shareRoutes = require('./routes/share');
+const setupRoutes = require('./routes/setup');
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/comments', commentsRoutes);
 app.use('/api/reactions', reactionsRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/share', shareRoutes);
+app.use('/api/setup', setupRoutes);
 
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 
